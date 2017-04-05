@@ -1,0 +1,1 @@
+﻿Search-ADAccount -AccountDisabled | ? { $_.distinguishedname -notlike '*Conference Room*'} | ? { $_.distinguishedname -notlike '*Builtin*'} | ? { $_.distinguishedname -notlike '*Disabled*'} | ? { $_.name -notlike '*Keyscan*'} | Select Name, distiguishedname | Sort-object Name | export-csv "C:\temp\Disabled.csv" -NoTypeInformation
