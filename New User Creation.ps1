@@ -1,5 +1,5 @@
 ﻿
-##Built based on a script provide by and with the assistance of Scine.## 
+##Built based on a script provided by and with the assistance of Scine.## 
  
 ##This section is where you're prompted for various aspects of a user's account.  Feel free to add/remove as you see fit##
 
