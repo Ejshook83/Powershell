@@ -27,7 +27,7 @@ $un = $un.tolower()
 $pw = Read-Host -AsSecureString 'Secure Password'
 $Name = $first + ' ' + $last
 $homedr = 'H:'
-$Homedir = '\\mdsiinc\dfs\home\' + $un
+$Homedir = '\\Server\dfs\home\' + $un
 new-ADUser $name -Enabled $true -AccountPassword $pw -Path 'CN=Users,DC=Domain,DC=Local' -Department $Office -Description $Description -DisplayName $name -HomeDirectory $Homedir -Manager $Manager -ScriptPath $logon -Title $Description -OfficePhone $Phone -SamAccountName $un -GivenName $first -Surname $last -OtherAttributes @{userprincipalname="$un@mdsiinc.com";mail="$first.$last@mdsiinc.com";proxyaddresses="SMTP:$first.$last@mdsiinc.com; smtp:$un@mdsiinc.com"} -passwordneverexpires 0
 set-aduser -Identity $un -homedrive $homedr
 add-ADGroupMember $Office -Members $un
