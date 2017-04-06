@@ -1,0 +1,1 @@
+﻿Test-ComputerSecureChannel -Repair -Credential (get-credential)
